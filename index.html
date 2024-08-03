@@ -15,6 +15,13 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .artistic-title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+            color: #4a90e2;
+            text-shadow: 2px 2px #333;
+            margin: 0;
+        }
         section {
             background: #fff;
             padding: 20px;
@@ -39,20 +46,8 @@
 </head>
 <body>
     <header>
-        <h1>Training-free High-quality Video Generation with Chain of Diffusion Model Experts</h1>
+        <h1 class="artistic-title">Training-free High-quality Video Generation with Chain of Diffusion Model Experts</h1>
     </header>
-    <section>
-        <h2>Pipeline</h2>
-        <div class="results">
-            <img src="main_fig.pdf" alt="Pipeline" width="1200">
-        </div>
-    </section>
-    <section>
-        <h2>Abstract</h2>
-        <p>
-            Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models are still far from practical utility, struggling to balance coherence, clarity, and aesthetics in video generation. In this paper, we propose <strong>ConFiner</strong>, a training-free framework that decouples the video generation into structural <strong>con</strong>trol and spatial-temporal re<strong>fine</strong>ment. It can generate high-quality videos with a chain of off-the-shelf diffusion model experts, each expert responsible for their respective tasks. During the refinement, we introduce coordinated denoising, which can utilize multiple diffusion experts within a single timestep. Furthermore, we introduce chain optimizer, which optimizes this framework by modeling the correlations between components. Experimental results indicate that with just 10% of the inference cost, our method surpasses Lavie and Modelscope across all objective and subjective metrics. Specifically, Aesthetic Quality, Coherence, and Visual quality have improved from their previous peaks of 0.597, 0.43, and 0.21 to 0.699, 0.51, and 0.51, respectively.
-        </p>
-    </section>
     <section>
         <h2>Example Videos</h2>
         <div class="video-container">
@@ -69,6 +64,18 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+    </section>
+    <section>
+        <h2>Pipeline</h2>
+        <div class="results">
+            <img src="main_fig.pdf" alt="Pipeline" width="1200">
+        </div>
+    </section>
+    <section>
+        <h2>Abstract</h2>
+        <p>
+            Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models are still far from practical utility, struggling to balance coherence, clarity, and aesthetics in video generation. In this paper, we propose <strong>ConFiner</strong>, a training-free framework that decouples the video generation into structural <strong>con</strong>trol and spatial-temporal re<strong>fine</strong>ment. It can generate high-quality videos with a chain of off-the-shelf diffusion model experts, each expert responsible for their respective tasks. During the refinement, we introduce coordinated denoising, which can utilize multiple diffusion experts within a single timestep. Furthermore, we introduce chain optimizer, which optimizes this framework by modeling the correlations between components. Experimental results indicate that with just 10% of the inference cost, our method surpasses Lavie and Modelscope across all objective and subjective metrics. Specifically, Aesthetic Quality, Coherence, and Visual quality have improved from their previous peaks of 0.597, 0.43, and 0.21 to 0.699, 0.51, and 0.51, respectively.
+        </p>
     </section>
     <section>
         <h2>Experimental Results</h2>
