@@ -6,30 +6,34 @@
     <title>Training-free High-quality Video Generation with Chain of Diffusion Model Experts</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
+            color: #333;
         }
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .artistic-title {
             font-family: 'Georgia', serif;
             font-size: 2.5em;
-            color: #4a90e2;
-            text-shadow: 1px 1px #333;
+            color: #333;
+            text-shadow: 1px 1px #ddd;
             margin: 0;
         }
         section {
             background: #fff;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            color: #333;
+        h2 {
+            color: #4a90e2;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
         }
         .video-container {
             display: flex;
@@ -41,7 +45,16 @@
         .video-container video {
             flex: 1 1 calc(33% - 20px);
             max-width: 100%;
-            max-width: 400px; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .results img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        p {
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -69,7 +82,7 @@
     <section>
         <h2>Pipeline</h2>
         <div class="results">
-            <img src="main_fig.pdf" alt="Pipeline" width="1200">
+            <img src="main_fig.pdf" alt="Pipeline">
         </div>
     </section>
     <section>
@@ -81,7 +94,7 @@
     <section>
         <h2>Experimental Results</h2>
         <div class="results">
-            <img src="experiments.jpg" alt="Experimental Results" width="1200">
+            <img src="experiments.jpg" alt="Experimental Results">
         </div>
     </section>
 </body>
