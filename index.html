@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeLong Video Generation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FreeLong: Training-Free Long Video Generation</h1>
+    </header>
+    <nav>
+        <a href="#abstract">Abstract</a>
+        <a href="#framework">Framework</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#ablation">Ablation Study</a>
+        <a href="#multiprompt">Multi-Prompt Videos</a>
+    </nav>
+    <main>
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p>
+                Video diffusion models have made substantial progress in various video generation applications. However, training models for long video tasks require significant computational and data resources, posing a challenge to developing long video diffusion models. This paper investigates a straightforward and training-free approach to adapt an existing short video diffusion model for consistent long video generation.
+            </p>
+        </section>
+        <section id="framework">
+            <h2>FreeLong Framework</h2>
+            <p>
+                We propose FreeLong for consistent long and high-fidelity video generation. The core of our method is SpectralBlend Temporal Attention (SB-TA) to blend the low-frequency components of the global video feature with the high-frequency components of the local video feature.
+            </p>
+            <!-- You can add an image here -->
+            <!-- <img src="path/to/image.jpg" alt="FreeLong Framework"> -->
+        </section>
+        <section id="comparison">
+            <h2>Comparison with Previous Methods</h2>
+            <p>
+                <!-- Comparison details go here -->
+            </p>
+        </section>
+        <section id="ablation">
+            <h2>Ablation Study</h2>
+            <p>
+                <!-- Ablation study details go here -->
+            </p>
+        </section>
+        <section id="multiprompt">
+            <h2>Multi-Prompt Videos</h2>
+            <p>
+                <!-- Multi-prompt video details go here -->
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FreeLong Video Generation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
