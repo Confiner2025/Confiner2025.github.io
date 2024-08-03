@@ -3,99 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeLong Video Generation</title>
+    <title>Training-free High-quality Video Generation with Chain of Diffusion Model Experts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
             text-align: center;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        main {
-            padding: 20px;
+            margin-bottom: 20px;
         }
         section {
-            margin-bottom: 40px;
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        footer {
-            background-color: #333;
-            color: #fff;
+        h1, h2 {
+            color: #333;
+        }
+        .video-container {
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>FreeLong: Training-Free Long Video Generation</h1>
+        <h1>Training-free High-quality Video Generation with Chain of Diffusion Model Experts</h1>
     </header>
-    <nav>
-        <a href="#abstract">Abstract</a>
-        <a href="#framework">Framework</a>
-        <a href="#comparison">Comparison</a>
-        <a href="#ablation">Ablation Study</a>
-        <a href="#multiprompt">Multi-Prompt Videos</a>
-    </nav>
-    <main>
-        <section id="abstract">
-            <h2>Abstract</h2>
-            <p>
-                Video diffusion models have made substantial progress in various video generation applications. However, training models for long video tasks require significant computational and data resources, posing a challenge to developing long video diffusion models. This paper investigates a straightforward and training-free approach to adapt an existing short video diffusion model for consistent long video generation.
-            </p>
-        </section>
-        <section id="framework">
-            <h2>FreeLong Framework</h2>
-            <p>
-                We propose FreeLong for consistent long and high-fidelity video generation. The core of our method is SpectralBlend Temporal Attention (SB-TA) to blend the low-frequency components of the global video feature with the high-frequency components of the local video feature.
-            </p>
-            <!-- You can add an image here -->
-            <!-- <img src="path/to/image.jpg" alt="FreeLong Framework"> -->
-        </section>
-        <section id="comparison">
-            <h2>Comparison with Previous Methods</h2>
-            <p>
-                <!-- Comparison details go here -->
-            </p>
-        </section>
-        <section id="ablation">
-            <h2>Ablation Study</h2>
-            <p>
-                <!-- Ablation study details go here -->
-            </p>
-        </section>
-        <section id="multiprompt">
-            <h2>Multi-Prompt Videos</h2>
-            <p>
-                <!-- Multi-prompt video details go here -->
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 FreeLong Video Generation. All rights reserved.</p>
-    </footer>
+    <section>
+        <h2>Pipeline</h2>
+        <p>
+            Here you can showcase the results of your experiments. Include charts, graphs, or text summaries that highlight the key findings of your research.
+        </p>
+        <!-- Example image, replace with your actual data visualization -->
+        <div class="results">
+            <img src="main_fig.pdf" alt="Pipeline" width="1000">
+        </div>
+    </section>
+    <section>
+        <h2>Abstract</h2>
+        <p>
+            Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models are still far from practical utility, struggling to balance coherence, clarity, and aesthetics in video generation. In this paper, we propose \textbf{ConFiner}, a training-free framework that decouples the video generation into structural \textbf{con}trol and spatial-temporal re\textbf{fine}ment. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for their respective tasks. During the refinement, we introduce coordinated denoising, which can utilize multiple diffusion experts within a single timestep. Furthermore, we introduce chain optimizer, which optimizes this framework by modeling the correlations between components. Experimental results indicate that with just 10% of the inference cost, our method surpasses Lavie and Modelscope across all objective and subjective metrics. Specifically, Aesthetic Quality, Coherence, and Visual quality have improved from their previous peaks of 0.597, 0.43, and 0.21 to 0.699, 0.51, and 0.51, respectively.
+        </p>
+    </section>
+    <section>
+        <h2>Example Video</h2>
+        <div class="video-container">
+            <video width="512" controls>
+                <source src="mecha.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+        <section>
+        <h2>Example Video</h2>
+        <div class="video-container">
+            <video width="512" controls>
+                <source src="car.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+        <section>
+        <h2>Example Video</h2>
+        <div class="video-container">
+            <video width="512" controls>
+                <source src="panda.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <section>
+        <h2>Experimental Results</h2>
+        <p>
+            Here you can showcase the results of your experiments. Include charts, graphs, or text summaries that highlight the key findings of your research.
+        </p>
+        <!-- Example image, replace with your actual data visualization -->
+        <div class="results">
+            <img src="path/to/your/results.jpg" alt="Experimental Results" width="600">
+        </div>
+    </section>
 </body>
 </html>
