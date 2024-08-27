@@ -39,13 +39,13 @@
             margin-top: 10px;
             text-decoration: none;
             cursor: pointer;
-            font-weight: 300; /* Adjusted font weight for lighter text */
+            font-weight: 300;
         }
 
         .github-button img {
             width: 20px;
             margin-right: 10px;
-            border-radius: 50%; /* Rounded the GitHub logo */
+            border-radius: 50%;
         }
 
         section {
@@ -93,8 +93,7 @@
         }
 
         .image-gallery img {
-            max-width: 100%;
-            width: 45%;
+            max-width: 80%;
             height: auto;
             border-radius: 8px;
             border: 1px solid #ddd;
@@ -123,6 +122,48 @@
             text-align: justify;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .comparison-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .comparison-videos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .comparison-videos video {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .comparison-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 1;
+        }
+
+        .comparison-btn.left {
+            left: 0;
+        }
+
+        .comparison-btn.right {
+            right: 0;
         }
 
         /* Alternating background colors for sections */
@@ -175,72 +216,54 @@
                     <source src="mecha.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">One mech on the Pacific Ocean.</p>
+                <p class="artistic-text">Mecha Animation</p>
             </div>
             <div>
                 <video controls>
                     <source src="clownfish.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">A clownfish swims among the colorful corals.</p>
+                <p class="artistic-text">Clownfish in the Sea</p>
             </div>
             <div>
                 <video controls>
                     <source src="car.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">A sports car on the racetrack.</p>
+                <p class="artistic-text">Speeding Car</p>
             </div>
-            <div>
+            <!-- Add remaining videos and captions as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Comparison with Previous Methods</h2>
+        <div class="comparison-container">
+            <button class="comparison-btn left" onclick="prevComparison()">&#8249;</button>
+            <div class="comparison-videos" id="comparison-videos">
+                <!-- Prompt 1 videos -->
                 <video controls>
-                    <source src="panda.mp4" type="video/mp4">
+                    <source src="streamingt2v_prompt1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">A panda is playing a tambourine by the lake.</p>
-            </div>
-            <div>
                 <video controls>
-                    <source src="city.mp4" type="video/mp4">
+                    <source src="confiner_prompt1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Flying cars go through a cyber city.</p>
-            </div>
-            <div>
                 <video controls>
-                    <source src="desert.mp4" type="video/mp4">
+                    <source src="lavie_prompt1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Off-road vehicle driving off-road in the desert.</p>
             </div>
-            <div>
-                <video controls>
-                    <source src="mountain.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Overlooking the mountains.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="wizard.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">The wizard is manipulating fire magic.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="penguin.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">A group of penguins line up and march across the snowfield.</p>
-            </div>
+            <button class="comparison-btn right" onclick="nextComparison()">&#8250;</button>
         </div>
     </section>
 
     <section>
         <h2>Experimental Results</h2>
         <div class="image-gallery">
-            <img src="experiments.jpg" alt="Objective Experimental Result">
-            <img src="table2.jpg" alt="Subjective Experimental Result">
+            <img src="experiment1.jpg" alt="Experimental Result 1">
+            <img src="experiment2.jpg" alt="Experimental Result 2">
         </div>
     </section>
 
