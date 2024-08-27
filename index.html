@@ -149,6 +149,7 @@
             display: flex;
             overflow: hidden;
             width: 80%;
+            flex-direction: column;
         }
 
         .comparison-group {
@@ -166,16 +167,32 @@
             border-radius: 8px;
         }
 
+        .model-description {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .prompt-description {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+        }
+
         .prev, .next {
             background-color: #333;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 20px;
             cursor: pointer;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             z-index: 1;
+            font-size: 2em;
         }
 
         .prev {
@@ -291,49 +308,79 @@
             <div class="comparison-videos" id="comparison-videos">
                 <!-- 第一个视频组 -->
                 <div class="comparison-group">
-                    <video controls>
-                        <source src="car.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="car.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="car.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <div>
+                        <video controls>
+                            <source src="car.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="car.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="car.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
                 </div>
+                <p class="prompt-description">Prompt: "A sports car on the racetrack."</p>
                 <!-- 第二个视频组 -->
                 <div class="comparison-group">
-                    <video controls>
-                        <source src="panda.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="panda.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="panda.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <div>
+                        <video controls>
+                            <source src="panda.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="panda.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="panda.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
                 </div>
+                <p class="prompt-description">Prompt: "A panda is playing a tambourine by the lake."</p>
                 <!-- 第三个视频组 -->
                 <div class="comparison-group">
-                    <video controls>
-                        <source src="clownfish.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="clownfish.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video controls>
-                        <source src="clownfish.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <div>
+                        <video controls>
+                            <source src="clownfish.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="clownfish.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video controls>
+                            <source src="clownfish.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
                 </div>
+                <p class="prompt-description">Prompt: "A clownfish swims among the colorful corals."</p>
             </div>
             <button class="next" onclick="showNext()">&#10095;</button>
         </div>
