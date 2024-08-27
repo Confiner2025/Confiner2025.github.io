@@ -85,19 +85,19 @@
             border-radius: 8px;
         }
 
-        .results img, .pipeline img {
-            display: block;
-            margin: 0 auto; /* Center the image */
-            border-radius: 8px;
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
-        .results img {
-            max-width: 80%;
-        }
-
-        .pipeline img {
-            width: 80%;
+        .image-gallery img {
+            max-width: 100%;
+            width: 45%;
             height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
         }
 
         p {
@@ -109,6 +109,13 @@
             font-style: italic;
             text-align: center;
             margin-top: 10px;
+        }
+
+        .pipeline img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .pipeline-description {
@@ -168,86 +175,80 @@
                     <source src="mecha.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Mecha Animation</p>
+                <p class="artistic-text">One mech on the Pacific Ocean.</p>
             </div>
             <div>
                 <video controls>
                     <source src="clownfish.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Clownfish in the Sea</p>
+                <p class="artistic-text">A clownfish swims among the colorful corals.</p>
             </div>
             <div>
                 <video controls>
                     <source src="car.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Speeding Car</p>
+                <p class="artistic-text">A sports car on the racetrack.</p>
             </div>
             <div>
                 <video controls>
                     <source src="panda.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Panda in the Bamboo Forest</p>
+                <p class="artistic-text">A panda is playing a tambourine by the lake.</p>
             </div>
             <div>
                 <video controls>
                     <source src="city.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">City Lights</p>
+                <p class="artistic-text">Flying cars go through a cyber city.</p>
             </div>
             <div>
                 <video controls>
                     <source src="desert.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Desert Journey</p>
+                <p class="artistic-text">Off-road vehicle driving off-road in the desert.</p>
             </div>
             <div>
                 <video controls>
                     <source src="mountain.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Mountain View</p>
+                <p class="artistic-text">Overlooking the mountains.</p>
             </div>
             <div>
                 <video controls>
                     <source src="wizard.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Wizard's Magic</p>
+                <p class="artistic-text">The wizard is manipulating fire magic.</p>
             </div>
             <div>
                 <video controls>
                     <source src="penguin.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">Penguin Parade</p>
+                <p class="artistic-text">A group of penguins line up and march across the snowfield.</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Comparison with Previous Methods</h2>
-        <p>
-            In this section, we compare ConFiner with previous state-of-the-art methods in terms of both objective and subjective quality. We find that ConFiner achieves superior performance with significantly reduced computational costs.
-        </p>
-    </section>
-
-    <section>
         <h2>Experimental Results</h2>
-        <div class="results">
-            <img src="experiments.jpg" alt="Experimental Results">
+        <div class="image-gallery">
+            <img src="experiments.jpg" alt="Objective Experimental Result">
+            <img src="table2.jpg" alt="Subjective Experimental Result">
         </div>
     </section>
 
     <section>
         <h2>Ablation Studies</h2>
-        <p>
-            Ablation studies demonstrate the contributions of various components in ConFiner. We systematically disable different aspects of the model to quantify their importance in the overall performance.
-        </p>
+        <div class="image-gallery">
+            <img src="ablation.png" alt="Ablation Study on ConFiner-Long's Strategies">
+        </div>
     </section>
 </body>
 
