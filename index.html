@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,12 @@
             background-color: #f9f9f9;
             color: #333;
         }
+
         header {
             text-align: center;
             margin-bottom: 40px;
         }
+
         .artistic-title {
             font-family: 'Georgia', serif;
             font-size: 2.5em;
@@ -23,6 +26,18 @@
             text-shadow: 1px 1px #ddd;
             margin: 0;
         }
+
+        .button {
+            background-color: #24292e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: not-allowed;
+            margin-top: 10px;
+        }
+
         section {
             background: #fff;
             padding: 20px;
@@ -30,11 +45,15 @@
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             color: #4a90e2;
-            border-bottom: 2px solid #4a90e2;
+            border-bottom: none;
             padding-bottom: 10px;
+            text-align: center;
+            font-size: 1.75em;
         }
+
         .video-container {
             display: flex;
             justify-content: space-between;
@@ -42,6 +61,7 @@
             gap: 20px;
             margin: 20px 0;
         }
+
         .video-container video {
             flex: 1 1 calc(33% - 20px);
             max-width: 100%;
@@ -49,59 +69,106 @@
             border: 1px solid #ddd;
             border-radius: 8px;
         }
+
         .results img {
             max-width: 100%;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
+
         p {
             line-height: 1.6;
         }
+
+        .artistic-text {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Alternating background colors for sections */
+        section:nth-of-type(2n) {
+            background-color: #f0f0f0;
+        }
+
+        section:nth-of-type(2n+1) {
+            background-color: #ffffff;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1 class="artistic-title">Training-free High-quality Video Generation with Chain of Diffusion Model Experts</h1>
+        <button class="button">Code Coming Soon</button>
     </header>
     <section>
         <h2>Example Videos</h2>
         <div class="video-container">
-            <video controls>
-                <source src="mecha.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="clownfish.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="car.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="panda.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="city.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="desert.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="mountain.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="wizard.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="penguin.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div>
+                <video controls>
+                    <source src="mecha.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">One mech on the Pacific Ocean.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="clownfish.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">A clownfish swims among the colorful corals.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="car.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">A sports car on the racetrack.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="panda.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">A panda is playing a tambourine by the lake.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="city.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Flying cars go through a cyber city.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="desert.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Off-road vehicle driving off-road in the desert.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="mountain.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Overlooking the mountains.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="wizard.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">The wizard is manipulating fire magic.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="penguin.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">A group of penguins line up and march across the snowfield.</p>
+            </div>
         </div>
     </section>
     <section>
@@ -113,7 +180,8 @@
     <section>
         <h2>Abstract</h2>
         <p>
-            Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models need high computational costs and produce suboptimal results due to high complexity of video generation task. In this paper, we propose \textbf{ConFiner}, an efficient high-quality video generation framework that decouples video generation into easier subtasks: structure \textbf{con}trol and spatial-temporal re\textbf{fine}ment. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design ConFiner-Long framework, which can generate long coherent video with three constraint strategies on Confiner. Experimental results indicate that with only 10\% of the inference cost, our ConFiner surpasses representative models like Lavie and Modelscope across all objective and subjective metrics. And ConFiner-Long can generate high-quality and coherent videos with up to 600 frames.
+            Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models need high computational costs and produce suboptimal results due to high complexity of video generation task. In this paper, we propose <strong>ConFiner</strong>, an efficient high-quality video generation framework that decouples video generation into easier subtasks: structure <strong>con</strong>trol and spatial-temporal re<strong>fine</strong>ment. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design ConFiner-Long framework, which can generate long coherent video with three constraint strategies on Confiner. Experimental results indicate that with only 10% of the inference cost, our ConFiner surpasses representative models like Lavie and Modelscope across all objective and subjective metrics. And ConFiner-Long can generate high-quality and coherent videos with up to 600 frames.
+        </p>
     </section>
     <section>
         <h2>Experimental Results</h2>
@@ -122,4 +190,5 @@
         </div>
     </section>
 </body>
+
 </html>
