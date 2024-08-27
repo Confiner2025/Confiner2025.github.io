@@ -79,16 +79,25 @@
         }
 
         .video-container video {
-            width: 450px;
-            height: 450px;
+            width: 420px;
+            height: 420px;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
 
-        .results img {
-            max-width: 80%; /* Adjusted width to 80% */
-            border: 1px solid #ddd;
+        .results img, .pipeline img {
+            display: block;
+            margin: 0 auto; /* Center the image */
             border-radius: 8px;
+        }
+
+        .results img {
+            max-width: 80%;
+        }
+
+        .pipeline img {
+            width: 80%;
+            height: auto;
         }
 
         p {
@@ -102,13 +111,8 @@
             margin-top: 10px;
         }
 
-        .pipeline img {
-            width: 80%;
-            height: auto;
-        }
-
         .pipeline-description {
-            font-size: 1.3em; /* Increased the font size for pipeline description */
+            font-size: 1.3em;
             text-align: justify;
             max-width: 800px;
             margin: 0 auto;
