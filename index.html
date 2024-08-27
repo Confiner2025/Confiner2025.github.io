@@ -39,11 +39,13 @@
             margin-top: 10px;
             text-decoration: none;
             cursor: pointer;
+            font-weight: 300; /* Adjusted font weight for lighter text */
         }
 
         .github-button img {
             width: 20px;
             margin-right: 10px;
+            border-radius: 50%; /* Rounded the GitHub logo */
         }
 
         section {
@@ -77,14 +79,14 @@
         }
 
         .video-container video {
-            flex: 1 1 calc(33% - 20px);
-            max-width: 100%;
+            width: 450px;
+            height: 450px;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
 
         .results img {
-            max-width: 100%;
+            max-width: 80%; /* Adjusted width to 80% */
             border: 1px solid #ddd;
             border-radius: 8px;
         }
@@ -101,8 +103,15 @@
         }
 
         .pipeline img {
-            width: 100%;
+            width: 80%;
             height: auto;
+        }
+
+        .pipeline-description {
+            font-size: 1.3em; /* Increased the font size for pipeline description */
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Alternating background colors for sections */
@@ -111,7 +120,12 @@
         }
 
         section:nth-of-type(2n+1) {
-            background-color: #ffffff;
+            background-color: #fff;
+        }
+
+        /* Make first section gray */
+        section:first-of-type {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
@@ -139,7 +153,7 @@
         <div class="pipeline">
             <img src="main_fig-3.pdf" alt="Pipeline">
         </div>
-        <p>ConFiner decouples the video generation process. Firstly, control expert generates a video structure. Subsequently, temporal and spatial experts perform the refinement of spatio-temporal details. Spatial and temporal experts work together in refinement stage with our coordinated denoising. By adding consistency initialization, consistency guidance and staggered refinement to ConFiner, ConFiner-Long can generate coherent long videos.</p>
+        <p class="pipeline-description">ConFiner decouples the video generation process. Firstly, control expert generates a video structure. Subsequently, temporal and spatial experts perform the refinement of spatio-temporal details. Spatial and temporal experts work together in refinement stage with our coordinated denoising. By adding consistency initialization, consistency guidance and staggered refinement to ConFiner, ConFiner-Long can generate coherent long videos.</p>
     </section>
 
     <section>
