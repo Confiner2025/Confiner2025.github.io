@@ -161,8 +161,8 @@
         }
 
         .comparison-group video {
-            width: 30%;
-            height: auto;
+            width: 420px;
+            height: 420px;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
@@ -324,7 +324,7 @@
                     </div>
                     <div>
                         <video controls>
-                            <source src="car.mp4" type="video/mp4">
+                            <source src="car_lavie.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="model-description">Lavie</p>
@@ -349,7 +349,7 @@
                     </div>
                     <div>
                         <video controls>
-                            <source src="panda.mp4" type="video/mp4">
+                            <source src="panda_lavie.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="model-description">Lavie</p>
@@ -374,7 +374,7 @@
                     </div>
                     <div>
                         <video controls>
-                            <source src="clownfish.mp4" type="video/mp4">
+                            <source src="clownfish_lavie.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="model-description">Lavie</p>
@@ -404,10 +404,14 @@
     <script>
         let currentIndex = 0;
         const groups = document.querySelectorAll('.comparison-group');
+        const prompts = document.querySelectorAll('.prompt-description');
 
         function showGroup(index) {
             groups.forEach((group, i) => {
                 group.style.display = i === index ? 'flex' : 'none';
+            });
+            prompts.forEach((prompt, i) => {
+                prompt.style.display = i === index ? 'block' : 'none';
             });
         }
 
@@ -421,7 +425,7 @@
             showGroup(currentIndex);
         }
 
-        // 初始化展示第一组视频
+        // 初始化展示第一组视频和prompt
         showGroup(currentIndex);
     </script>
 </body>
