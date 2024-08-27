@@ -39,13 +39,13 @@
             margin-top: 10px;
             text-decoration: none;
             cursor: pointer;
-            font-weight: 300; /* Adjusted font weight for lighter text */
+            font-weight: 300;
         }
 
         .github-button img {
             width: 20px;
             margin-right: 10px;
-            border-radius: 50%; /* Rounded the GitHub logo */
+            border-radius: 50%;
         }
 
         section {
@@ -93,8 +93,7 @@
         }
 
         .image-gallery img {
-            max-width: 100%;
-            width: 45%;
+            width: 80%;
             height: auto;
             border-radius: 8px;
             border: 1px solid #ddd;
@@ -125,7 +124,6 @@
             margin: 0 auto;
         }
 
-        /* Alternating background colors for sections */
         section:nth-of-type(2n) {
             background-color: #f0f0f0;
         }
@@ -134,9 +132,47 @@
             background-color: #fff;
         }
 
-        /* Make first section gray */
         section:first-of-type {
             background-color: #f0f0f0;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel .left-arrow {
+            left: 10px;
+        }
+
+        .carousel .right-arrow {
+            right: 10px;
+        }
+
+        .carousel .videos {
+            display: flex;
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel .videos video {
+            width: 420px;
+            height: 420px;
+            margin: 0 10px;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -160,80 +196,64 @@
     </section>
 
     <section>
+        <h2>Comparisons with Previous Methods</h2>
+        <div class="carousel">
+            <div class="arrow left-arrow" onclick="previousSlide()">&#10094;</div>
+            <div class="videos" id="videoCarousel">
+                <!-- Each group of 3 videos -->
+                <div class="video-group">
+                    <video controls>
+                        <source src="streamingt2v1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="confiner1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="lavie1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-group">
+                    <video controls>
+                        <source src="streamingt2v2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="confiner2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="lavie2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-group">
+                    <video controls>
+                        <source src="streamingt2v3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="confiner3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="lavie3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
+        </div>
+    </section>
+
+    <section>
         <h2>Pipeline</h2>
         <div class="pipeline">
             <img src="main_fig-3.pdf" alt="Pipeline">
         </div>
         <p class="pipeline-description">ConFiner decouples the video generation process. Firstly, control expert generates a video structure. Subsequently, temporal and spatial experts perform the refinement of spatio-temporal details. Spatial and temporal experts work together in refinement stage with our coordinated denoising. By adding consistency initialization, consistency guidance and staggered refinement to ConFiner, ConFiner-Long can generate coherent long videos.</p>
-    </section>
-
-    <section>
-        <h2>Example Videos</h2>
-        <div class="video-container">
-            <div>
-                <video controls>
-                    <source src="mecha.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">One mech on the Pacific Ocean.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="clownfish.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">A clownfish swims among the colorful corals.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="car.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">A sports car on the racetrack.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="panda.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">A panda is playing a tambourine by the lake.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="city.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Flying cars go through a cyber city.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="desert.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Off-road vehicle driving off-road in the desert.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="mountain.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Overlooking the mountains.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="wizard.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">The wizard is manipulating fire magic.</p>
-            </div>
-            <div>
-                <video controls>
-                    <source src="penguin.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">A group of penguins line up and march across the snowfield.</p>
-            </div>
-        </div>
     </section>
 
     <section>
@@ -250,6 +270,33 @@
             <img src="ablation.jpg" alt="Ablation Study on ConFiner-Long's Strategies">
         </div>
     </section>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(slideIndex) {
+            const slides = document.querySelectorAll('.video-group');
+            if (slideIndex >= slides.length) currentSlide = 0;
+            if (slideIndex < 0) currentSlide = slides.length - 1;
+
+            slides.forEach((slide, index) => {
+                slide.style.display = index === currentSlide ? 'flex' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Initialize carousel
+        showSlide(currentSlide);
+    </script>
 </body>
 
 </html>
