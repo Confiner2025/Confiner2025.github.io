@@ -37,7 +37,8 @@
             border-radius: 30px;
             font-size: 1em;
             margin-top: 10px;
-            cursor: not-allowed;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .github-button img {
@@ -65,20 +66,19 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: justify;
+            font-size: 1.2em;
         }
 
         .video-container {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
             gap: 20px;
-            margin: 20px 0;
+            justify-content: space-between;
         }
 
         .video-container video {
             flex: 1 1 calc(33% - 20px);
             max-width: 100%;
-            max-width: 420px;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
@@ -119,9 +119,10 @@
 <body>
     <header>
         <h1 class="artistic-title">Training-free High-quality Video Generation with Chain of Diffusion Model Experts</h1>
-        <button class="github-button">
-            <img src="path/to/github-icon.png" alt="GitHub logo">Code (coming soon)
-        </button>
+        <a href="#" class="github-button" onclick="window.location.reload();">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo">
+            Code (coming soon)
+        </a>
     </header>
 
     <section>
@@ -138,6 +139,7 @@
         <div class="pipeline">
             <img src="main_fig-3.pdf" alt="Pipeline">
         </div>
+        <p>ConFiner decouples the video generation process. Firstly, control expert generates a video structure. Subsequently, temporal and spatial experts perform the refinement of spatio-temporal details. Spatial and temporal experts work together in refinement stage with our coordinated denoising. By adding consistency initialization, consistency guidance and staggered refinement to ConFiner, ConFiner-Long can generate coherent long videos.</p>
     </section>
 
     <section>
@@ -164,8 +166,56 @@
                 </video>
                 <p class="artistic-text">Speeding Car</p>
             </div>
-            <!-- Add remaining videos and captions as needed -->
+            <div>
+                <video controls>
+                    <source src="panda.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Panda in the Bamboo Forest</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="city.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">City Lights</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="desert.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Desert Journey</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="mountain.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Mountain View</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="wizard.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Wizard's Magic</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="penguin.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Penguin Parade</p>
+            </div>
         </div>
+    </section>
+
+    <section>
+        <h2>Comparison with Previous Methods</h2>
+        <p>
+            In this section, we compare ConFiner with previous state-of-the-art methods in terms of both objective and subjective quality. We find that ConFiner achieves superior performance with significantly reduced computational costs.
+        </p>
     </section>
 
     <section>
@@ -173,6 +223,13 @@
         <div class="results">
             <img src="experiments.jpg" alt="Experimental Results">
         </div>
+    </section>
+
+    <section>
+        <h2>Ablation Studies</h2>
+        <p>
+            Ablation studies demonstrate the contributions of various components in ConFiner. We systematically disable different aspects of the model to quantify their importance in the overall performance.
+        </p>
     </section>
 </body>
 
