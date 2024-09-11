@@ -80,8 +80,8 @@
 
         .video-container video,
         .video-container img {
-            width: 300px;
-            height: 300px;
+            width: 420px;
+            height: 420px;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
@@ -270,6 +270,20 @@
                 </video>
                 <p class="artistic-text">It's raining heavily outside the window.</p>
             </div>
+            <div>
+                <video autoplay loop muted playsinline>
+                    <source src="astronaut.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Astronaut floating in space.</p>
+            </div>
+            <div>
+                <video autoplay loop muted playsinline>
+                    <source src="shore.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">The rocks on the shore, with calm sea surface.</p>
+            </div>
         </div>
     </section>
 
@@ -375,6 +389,54 @@
                     </div>
                 </div>
                 <p class="prompt-description">Prompt: "It's raining heavily outside the window."</p>
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="astronaut_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="astronaut.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="astronaut_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
+                <p class="prompt-description">Prompt: "Astronaut floating in space."</p>
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="shore_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="shore.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="shore_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
+                <p class="prompt-description">Prompt: "The rocks on the shore, with calm sea surface."</p>
             </div>
             <button class="next" onclick="showNext()">&#10095;</button>
         </div>
