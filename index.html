@@ -244,31 +244,31 @@
         <div class="video-container">
             <div>
                 <video autoplay loop muted playsinline>
+                    <source src="offroad.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">Off-road vehicle driving off-road in the desert.</p>
+            </div>
+            <div>
+                <video autoplay loop muted playsinline>
+                    <source src="wizard.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">The wizard is manipulating fire magic.</p>
+            </div>
+            <div>
+                <video autoplay loop muted playsinline>
+                    <source src="penguin.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">A group of penguins line up and march across the snowfield.</p>
+            </div>
+            <div>
+                <video autoplay loop muted playsinline>
                     <source src="coffee.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p class="artistic-text">The coffee on the table is steaming.</p>
-            </div>
-            <div>
-                <video autoplay loop muted playsinline>
-                    <source src="campfire.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Campfire at night in a snowy forest.</p>
-            </div>
-            <div>
-                <video autoplay loop muted playsinline>
-                    <source src="swan.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Two white swans gracefully swam in the serene lake.</p>
-            </div>
-            <div>
-                <video autoplay loop muted playsinline>
-                    <source src="rain.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">It's raining heavily outside the window.</p>
             </div>
             <div>
                 <video autoplay loop muted playsinline>
@@ -279,10 +279,10 @@
             </div>
             <div>
                 <video autoplay loop muted playsinline>
-                    <source src="shore.mp4" type="video/mp4">
+                    <source src="swan.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">The rocks on the shore, with calm sea surface.</p>
+                <p class="artistic-text">Two white swans gracefully swam in the serene lake.</p>
             </div>
         </div>
     </section>
@@ -293,6 +293,78 @@
         <div class="comparison-container">
             <button class="prev" onclick="showPrev()">&#10094;</button>
             <div class="comparison-videos" id="comparison-videos">
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="offroad_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="offroad.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="offroad_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
+                <p class="prompt-description">Prompt: "Off-road vehicle driving off-road in the desert."</p>              
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="wizard_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="wizard.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="wizard_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
+                <p class="prompt-description">Prompt: "The wizard is manipulating fire magic."</p>
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="penguin_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="penguin.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="penguin_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
+                <p class="prompt-description">Prompt: "A group of penguins line up and march across the snowfield."</p>
                 <div class="comparison-group">
                     <div>
                         <video autoplay loop muted playsinline>
@@ -316,79 +388,7 @@
                         <p class="model-description">Lavie</p>
                     </div>
                 </div>
-                <p class="prompt-description">Prompt: "The coffee on the table is steaming."</p>              
-                <div class="comparison-group">
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="swan_streaming.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">StreamingT2V</p>
-                    </div>
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="swan.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">ConFiner</p>
-                    </div>
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="swan_lavie.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">Lavie</p>
-                    </div>
-                </div>
-                <p class="prompt-description">Prompt: "Two white swans gracefully swam in the serene lake."</p>
-                <div class="comparison-group">
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="campfire_streaming.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">StreamingT2V</p>
-                    </div>
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="campfire.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">ConFiner</p>
-                    </div>
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="campfire_lavie.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">Lavie</p>
-                    </div>
-                </div>
-                <p class="prompt-description">Prompt: "Campfire at night in a snowy forest."</p>
-                <div class="comparison-group">
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="rain_streaming.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">StreamingT2V</p>
-                    </div>
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="rain.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">ConFiner</p>
-                    </div>
-                    <div>
-                        <video autoplay loop muted playsinline>
-                            <source src="rain_lavie.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p class="model-description">Lavie</p>
-                    </div>
-                </div>
-                <p class="prompt-description">Prompt: "It's raining heavily outside the window."</p>
+                <p class="prompt-description">Prompt: "The coffee on the table is steaming."</p>
                 <div class="comparison-group">
                     <div>
                         <video autoplay loop muted playsinline>
@@ -416,27 +416,27 @@
                 <div class="comparison-group">
                     <div>
                         <video autoplay loop muted playsinline>
-                            <source src="shore_streaming.mp4" type="video/mp4">
+                            <source src="swan_streaming.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="model-description">StreamingT2V</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
-                            <source src="shore.mp4" type="video/mp4">
+                            <source src="swan.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="model-description">ConFiner</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
-                            <source src="shore_lavie.mp4" type="video/mp4">
+                            <source src="swan_lavie.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <p class="model-description">Lavie</p>
                     </div>
                 </div>
-                <p class="prompt-description">Prompt: "The rocks on the shore, with calm sea surface."</p>
+                <p class="prompt-description">Prompt: "Two white swans gracefully swam in the serene lake."</p>
             </div>
             <button class="next" onclick="showNext()">&#10095;</button>
         </div>
