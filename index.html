@@ -226,7 +226,7 @@
         <h2>Abstract</h2>
         <div class="abstract">
             <p>
-                Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models need high computational costs and produce suboptimal results due to extreme complexity of video generation task. In this paper, we propose ConFiner, an efficient video generation framework that decouples video generation into easier subtasks: structure control and spatial-temporal refinement. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design ConFiner-Long framework, which can generate long coherent video with three constraint strategies on ConFiner. Experimental results indicate that with only 10\% of the inference cost, our ConFiner surpasses representative models like Lavie and Modelscope across all objective and subjective metrics. And ConFiner-Long can generate high-quality and coherent videos with up to 600 frames.
+                Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models need high computational costs and produce suboptimal results due to extreme complexity of video generation task. In this paper, we propose ConFiner, an efficient video generation framework that decouples video generation into easier subtasks: structure control and spatial-temporal refinement. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design ConFiner-Long framework, which can generate long coherent video with three constraint strategies on ConFiner. Experimental results indicate that with only 10% of the inference cost, our ConFiner surpasses representative models like Lavie and Modelscope across all objective and subjective metrics. And ConFiner-Long can generate high-quality and coherent videos with up to 600 frames.
             </p>
         </div>
     </section>
@@ -236,7 +236,7 @@
         <div class="pipeline">
             <img src="main_fig.pdf" alt="Pipeline">
         </div>
-        <p class="pipeline-description">ConFiner decouples the video generation process. Firstly, control expert generates a video structure. Subsequently, temporal and spatial experts perform the refinement of spatio-temporal details. V' and V'' represent videos on SE's noise scheduler and TE's scheduler, respectively. V_0(t) denotes the estimated pure video at timestep $t$. By adding consistency initialization, coherence guidance and staggered refinement to ConFiner, ConFiner-Long can generate coherent long videos.</p>
+        <p class="pipeline-description">ConFiner decouples the video generation process. Firstly, control expert generates a video structure. Subsequently, temporal and spatial experts perform the refinement of spatio-temporal details. V' and V'' represent videos on SE's noise scheduler and TE's scheduler, respectively. V_0(t) denotes the estimated pure video at timestep t. By adding consistency initialization, coherence guidance and staggered refinement to ConFiner, ConFiner-Long can generate coherent long videos.</p>
     </section>
 
     <section>
