@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training-free Long Video Generation with Chain of Diffusion Model Experts</title>
+    <title>Decoupled Long Video Generation with Chain of Training-free Diffusion Model Experts</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -226,7 +226,7 @@
         <h2>Abstract</h2>
         <div class="abstract">
             <p>
-                Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models need high computational costs and produce suboptimal results due to extreme complexity of video generation task. In this paper, we propose \textbf{ConFiner}, an efficient video generation framework that decouples video generation into easier subtasks: structure \textbf{con}trol and spatial-temporal re\textbf{fine}ment. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design \textbf{ConFiner-Long} framework, which can generate long coherent video with three constraint strategies on ConFiner. Experimental results indicate that with only \textbf{10\% of the inference cost}, our ConFiner surpasses representative models like Lavie and Modelscope across all objective and subjective metrics. And ConFiner-Long can generate high-quality and coherent videos with up to \textbf{600 frames}.
+                Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models struggle with poor quality and slow speed due to extreme complexity of video generation task. In this paper, we propose \textbf{ConFiner}, an efficient video generation framework that decouples video generation into three easier subtasks: structure control, spatial refinement and temporal refinement. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design \textbf{ConFiner-Long} framework, which can generate long coherent video with three constraint strategies on ConFiner. Experimental results indicate that with only \textbf{20\% of the inference cost}, our ConFiner achieves higher average score than representative models like Wan2.1 and HunyuanVideo on Vbench. And ConFiner-Long can generate high-quality and coherent videos with infinite length.
             </p>
         </div>
     </section>
@@ -240,7 +240,7 @@
     </section>
 
     <section>
-        <h2>Example Videos</h2>
+        <h2>Example Videos(Setting1)</h2>
         <div class="video-container">
             <div>
                 <video autoplay loop muted playsinline>
@@ -306,7 +306,7 @@
                             <source src="offroad.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="model-description">ConFiner</p>
+                        <p class="model-description">ConFiner(Setting1)</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
@@ -330,7 +330,7 @@
                             <source src="wizard.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="model-description">ConFiner</p>
+                        <p class="model-description">ConFiner(Setting1)</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
@@ -354,7 +354,7 @@
                             <source src="penguin.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="model-description">ConFiner</p>
+                        <p class="model-description">ConFiner(Setting1)</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
@@ -378,7 +378,7 @@
                             <source src="coffee.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="model-description">ConFiner</p>
+                        <p class="model-description">ConFiner(Setting1)</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
@@ -402,7 +402,7 @@
                             <source src="city.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="model-description">ConFiner</p>
+                        <p class="model-description">ConFiner(Setting1)</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
@@ -426,7 +426,7 @@
                             <source src="clownfish.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p class="model-description">ConFiner</p>
+                        <p class="model-description">ConFiner(Setting1)</p>
                     </div>
                     <div>
                         <video autoplay loop muted playsinline>
@@ -445,8 +445,9 @@
     <section>
         <h2>Experimental Results</h2>
         <div class="image-gallery">
-            <img src="experiments.jpg" alt="Objective Experimental Result">
-            <img src="table2.jpg" alt="Subjective Experimental Result">
+            <img src="exp1.jpg" alt="exp1">
+            <img src="exp2.jpg" alt="exp2">
+            <img src="exp3.jpg" alt="exp3">
         </div>
     </section>
     <section>
