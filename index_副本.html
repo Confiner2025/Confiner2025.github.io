@@ -65,7 +65,7 @@
         }
 
         .abstract {
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
             text-align: justify;
             font-size: 1.2em;
@@ -128,7 +128,7 @@
         .video-container-two-column video {
             width: 100%;
             height: auto;
-            aspect-ratio: 16/9;
+            aspect-ratio: 1;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
@@ -181,7 +181,7 @@
         .pipeline-description {
             font-size: 1.3em;
             text-align: justify;
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -285,7 +285,7 @@
         <h2>Abstract</h2>
         <div class="abstract">
             <p>
-                Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models struggle with poor quality and slow speed due to extreme complexity of video generation task. In this paper, we propose ConFiner, an efficient video generation framework that decouples video generation into three easier subtasks: structure control, spatial refinement and temporal refinement. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design ConFiner-Long framework, which can generate long coherent video with three constraint strategies on ConFiner. Experimental results indicate that with only 20% of the inference cost, our ConFiner achieves higher average score than representative models like Wan2.1 and HunyuanVideo on Vbench. And ConFiner-Long can generate high-quality and coherent videos with infinite length.
+                Video generation models hold substantial potential in areas such as filmmaking. However, current video diffusion models struggle with poor quality and slow speed due to extreme complexity of video generation task. In this paper, we propose \textbf{ConFiner}, an efficient video generation framework that decouples video generation into three easier subtasks: structure control, spatial refinement and temporal refinement. It can generate high-quality videos with chain of off-the-shelf diffusion model experts, each expert responsible for a decoupled subtask. During the refinement, we introduce coordinated denoising, which can merge multiple diffusion experts' capabilities into a single sampling. Furthermore, we design \textbf{ConFiner-Long} framework, which can generate long coherent video with three constraint strategies on ConFiner. Experimental results indicate that with only \textbf{20\% of the inference cost}, our ConFiner achieves higher average score than representative models like Wan2.1 and HunyuanVideo on Vbench. And ConFiner-Long can generate high-quality and coherent videos with infinite length.
             </p>
         </div>
     </section>
@@ -324,6 +324,13 @@
             </div>
             <div>
                 <video autoplay loop muted playsinline>
+                    <source src="coffee.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="artistic-text">The coffee on the table is steaming.</p>
+            </div>
+            <div>
+                <video autoplay loop muted playsinline>
                     <source src="city.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -336,13 +343,6 @@
                 </video>
                 <p class="artistic-text">Clownfish swims among the colorful corals.</p>
             </div>
-            <div>
-                <video autoplay loop muted playsinline>
-                    <source src="coffee.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">The coffee on the table is steaming.</p>
-            </div>
         </div>
     </section>
     <section>
@@ -350,25 +350,19 @@
         <div class="video-container-two-column">
             <div>
                 <video autoplay loop muted playsinline>
-                    <source src="penguin2.mp4" type="video/mp4">
+                    <source src="offroad.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="artistic-text">A group of penguins line up and march across the snowfield.</p>
+                <p class="artistic-text">Off-road vehicle driving off-road in the desert.</p>
             </div>
             <div>
                 <video autoplay loop muted playsinline>
-                    <source src="clownfish2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="artistic-text">Clownfish swims among the colorful corals.</p>
-            </div>
-            <div>
-                <video autoplay loop muted playsinline>
-                    <source src="wizard2.mp4" type="video/mp4">
+                    <source src="wizard.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p class="artistic-text">The wizard is manipulating fire magic.</p>
-            </div>            
+            </div>
+            
         </div>
     </section>
 
@@ -521,6 +515,57 @@
                         <p class="model-description">Lavie</p>
                     </div>
                 </div>
+
+
+                
+                <p class="prompt-description">Prompt: "Flying cars go through a cyber city."</p>
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="clownfish_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="clownfish.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner(Setting1)</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="clownfish_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
+                <p class="prompt-description">Prompt: "Flying cars go through a cyber city."</p>
+                <div class="comparison-group">
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="clownfish_streaming.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">StreamingT2V</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="clownfish.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">ConFiner(Setting1)</p>
+                    </div>
+                    <div>
+                        <video autoplay loop muted playsinline>
+                            <source src="clownfish_lavie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="model-description">Lavie</p>
+                    </div>
+                </div>
                 <p class="prompt-description">Prompt: "Clownfish swims among the colorful corals."</p>
             </div>
             <button class="next" onclick="showNext()">&#10095;</button>
@@ -537,7 +582,7 @@
     </section>
     <section>
         <h2>Ablation Study on Three Strategies of ConFiner-Long</h2>
-        <p class="pipeline-description" style="text-align: center;">A clownfish in the seabed, with background of sand.</p>
+        <p class="pipeline-description">A clownfish in the seabed, with background of sand.</p>
         <div class="video-container ablation-container">
             <div>
                 <img src="1.gif" alt="Comparison 1">
